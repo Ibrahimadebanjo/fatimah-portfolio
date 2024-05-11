@@ -1,0 +1,44 @@
+body{
+    margin-top:40px;
+    box-sizing: border-box;
+}
+body::before{
+    content:"XS";
+    font-size:2rem;
+    position:fixed;
+    color:red;
+    top:0;
+    right:0;
+}
+base::before{
+    border-bottom: 22px;
+    
+}
+.box{
+    background:lawngreen;
+    border:1px solid green;
+    min-height: 60px;
+    font-size:20px;
+
+}
+
+@media(min-width:576px){
+    body::before{
+        content:'SM';
+    }
+}
+@media(min-width:768px){
+    body::before{
+        content:'MD';
+    }
+}
+@media(min-width:992px){
+    body::before{
+        content:'LG';
+    }
+}
+@media(min-width:1199.98px){
+    body::before{
+        content:'XLG';
+    }
+}

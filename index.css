@@ -1,0 +1,111 @@
+*{
+    padding:0;
+    margin:0;
+    box-sizing: border-box;
+}
+body{
+  height:100vh;
+  background-image: url(/images/background-images/joanna-kosinska-h2O_jHvjfIM-unsplash.jpg);
+  background-repeat: no-repeat;
+  background-position: cover;
+  background-size: cover;
+  background-attachment: fixed;
+}
+.section-connector{
+  position:relative;
+}
+.section-connector::after{
+  content:"";
+  width:2px;
+  height:90px;
+  background-color:hotpink;
+  position: absolute; 
+  top:-30px;
+  left:50%;
+}
+/*======================== PROJECT SECTION ========================*/
+.project{
+  overflow:hidden;
+  position: relative;
+}
+.project .content{
+  position:absolute;
+  top:100%;
+  left:0;
+  background-color:indianred;
+  width:100%;
+  height:100%;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  flex-flow:column;
+  transition:  .7s;
+} 
+.project:hover .content{
+  top:0;
+}
+.project:hover img {
+  transform : translateY(-100%);
+  background-color: blue;
+}
+.project img{
+  width:100%;
+  height:100%;
+}
+
+/* =================================RESUME SECTION=========================== */
+.eduexp{
+  position:relative;
+}
+.eduexp::before{
+  content:" ";
+  height:100%;
+  width:1px;
+  background-color: blue;
+  position:absolute;
+  top:10px;
+  left:20px;
+
+}
+.eduexp::after{
+  content:" ";
+  height:10px;
+  width:15px;
+  background-color: blue;
+  position:absolute;
+  top:10px;
+  left:14px;
+
+}
+
+/* ============ */
+.team-mates{
+  cursor: pointer;
+  overflow:hidden;
+  position: relative;
+}
+.team-mates .content{
+  position:absolute;
+  top:100%;
+  left:0;
+  background-color:rgba(205, 92, 92,0.3) ;
+  width:100%;
+  height:100%;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  flex-flow:column;
+  transition:  .7s;
+  border-radius: 20px;
+} 
+.team-mates:hover .content{
+  top:0;
+}
+.team-mates:hover img {
+  background-color: blue;
+}
+.team-mates img{
+  border-radius: 20px;
+  width:100%;
+  height:100%;
+}
