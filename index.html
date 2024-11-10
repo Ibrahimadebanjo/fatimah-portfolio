@@ -15,63 +15,42 @@
     <title>My portfolio</title>
 </head>
 <body>
+
   <!-- ====================== Navigation Menu Start ============================= -->
-<nav class="navbar navbar-light bg-light  fixed-top">
-  <div class="container-fluid">
-    <a class="navbar-brand" href="#"> Fatimo Adebanjo</a>
-    <button class="navbar-toggler btn" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar"
-      aria-controls="offcanvasNavbar">
-      <span class="navbar-toggler-icon " ></span>
-    </button>
-    <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar"
-      aria-labelledby="offcanvasNavbarLabel">
-      <div class="offcanvas-header">
-        <h5 class="offcanvas-title" id="offcanvasNavbarLabel"> Fatimo Adebanjo</h5>
-        <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
-      </div>
-      <div class="offcanvas-body">
-        <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
-          <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="#home">Home</a>
+
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <div class="container">
+      <h3 class="navbar-brand" > Fatimo Adebanjo</h3>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item " >
+            <a class="nav-link " href="#about"  onmouseover="this.style.color='blue'" onmouseleave="this.style.color='gray'">About</a>
+          </li>
+          <li class="nav-item ">
+            <a class="nav-link" href="#service" onmouseover="this.style.color='blue'" onmouseleave="this.style.color='gray'">Service</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#about">About</a>
+            <a class="nav-link" href="#project-section"  onmouseover="this.style.color='blue'" onmouseleave="this.style.color='gray'">Projects</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#service">Service</a>
+            <a class="nav-link" href="#education"  onmouseover="this.style.color='blue'" onmouseleave="this.style.color='gray'">Education</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#project-section">Projects</a>
+            <a class="nav-link" href="#team-mates-section"  onmouseover="this.style.color='blue'" onmouseleave="this.style.color='gray'">Team Mates</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#education">Education</a>
+            <a class="nav-link" href="#testimonials"  onmouseover="this.style.color='blue'" onmouseleave="this.style.color='gray'">Testimonials</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#team-mates-section">Team Mates</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#testimonials">Testimonials</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#contact">contact Me </a>
-          </li>
-          <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" id="dropdownId" data-bs-toggle="dropdown"
-              aria-haspopup="true" aria-expanded="false">Dropdown</a>
-            <div class="dropdown-menu" aria-labelledby="dropdownId">
-              <a class="dropdown-item" target="_blank" href="#">Download CV</a>
-              <a class="dropdown-item" target="_blank" href="https://www.linkedin.com/in/fatimo-adebanjo/">Linkedin </a>
-            </div>
+            <a class="nav-link" href="#contact"  onmouseover="this.style.color='blue'" onmouseleave="this.style.color='gray'">contact Me </a>
           </li>
         </ul>
-        <form class="d-flex">
-          <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-          <button class="btn btn-outline-success" type="submit">Search</button>
-        </form>
       </div>
     </div>
-  </div>
-</nav>
+  </nav>
 
 <!-- ========================Navigation Menu End ================================ -->
 
@@ -987,6 +966,20 @@ if (!form.checkValidity()){
         else{
 
         }
+        // const btnToggle = document.getElementById("navbar-toggler-bug");
+        // const clickLink = document.getElementById("#click-handler-bug");
+        // clickLink.addEventListener("click", ()=>{
+        //   btnToggle.setAttribute("data-bs-toggle", "collapse offcanvas")
+        // })
+        document.querySelectorAll('.navbar-nav .nav-link').forEach(link => {
+      link.addEventListener('click', () => {
+        const navbar = document.getElementById('navbarNav');
+        const bsCollapse = new bootstrap.Collapse(navbar, {
+          toggle: false
+        });
+        bsCollapse.hide();
+      });
+    });
        
      </script>
      <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.umd.js"></script>

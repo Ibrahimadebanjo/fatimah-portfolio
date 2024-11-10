@@ -11,6 +11,16 @@ body{
   background-size: cover;
   background-attachment: fixed;
 }
+.navbar-nav .nav-item:hover  {
+ color: blue;
+  }
+
+
+
+
+
+
+
 .section-connector{
   position:relative;
 }
